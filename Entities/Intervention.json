@@ -1,0 +1,73 @@
+{
+  "name": "Intervention",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Intervention title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the intervention"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "breathing",
+        "grounding",
+        "journaling",
+        "movement",
+        "sleep",
+        "focus",
+        "anxiety",
+        "stress"
+      ],
+      "description": "Intervention category"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "description": "Expected duration in minutes"
+    },
+    "instructions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Step-by-step instructions"
+    },
+    "audio_script": {
+      "type": "string",
+      "description": "Script for audio guidance"
+    },
+    "benefits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "What this intervention helps with"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "description": "Difficulty level"
+    },
+    "mood_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "When this intervention is most helpful"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "category",
+    "duration_minutes",
+    "instructions"
+  ]
+}

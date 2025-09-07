@@ -1,0 +1,43 @@
+{
+  "name": "ChatMessage",
+  "type": "object",
+  "properties": {
+    "message": {
+      "type": "string",
+      "description": "The chat message content"
+    },
+    "sender": {
+      "type": "string",
+      "enum": [
+        "user",
+        "aya"
+      ],
+      "description": "Who sent the message"
+    },
+    "message_type": {
+      "type": "string",
+      "enum": [
+        "text",
+        "suggestion",
+        "resource",
+        "crisis_check"
+      ],
+      "default": "text",
+      "description": "Type of message"
+    },
+    "mood_context": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 10,
+      "description": "User's mood level when message was sent"
+    },
+    "session_id": {
+      "type": "string",
+      "description": "Chat session identifier"
+    }
+  },
+  "required": [
+    "message",
+    "sender"
+  ]
+}

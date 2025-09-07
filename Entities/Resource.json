@@ -1,0 +1,43 @@
+{
+  "name": "Resource",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Resource title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Resource description"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "crisis",
+        "counseling",
+        "peer_support",
+        "online_therapy",
+        "helpline",
+        "campus_resource",
+        "community_org"
+      ],
+      "description": "Resource category"
+    },
+    "contact_type": {
+      "type": "string",
+      "enum": [
+        "phone",
+        "text",
+        "chat",
+        "video",
+        "in_person",
+        "app"
+      ],
+      "description": "How to access this resource"
+    },
+    "contact_info": {
+      "type": "string",
+      "description": "Phone number, website, or other contact details"
+    },
+    "availability": {
+ 
